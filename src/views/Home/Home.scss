@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+.home {
+  &__left {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  padding-bottom: 16px;
+}
+
+.user-avatar {
+  margin-right: 8px;
+}

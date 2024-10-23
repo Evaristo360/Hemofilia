@@ -1,0 +1,98 @@
+{
+  "name": "@octopy/react-spa-hemofilia",
+  "private": true,
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "description": "",
+  "author": {
+    "name": "Octopy"
+  },
+  "homepage": "",
+  "dependencies": {
+    "@material-ui/core": "4.11.3",
+    "@material-ui/icons": "4.11.2",
+    "@material-ui/lab": "4.0.0-alpha.57",
+    "@octopy/react-auth": "1.0.0",
+    "@octopy/react-aws-utils": "1.0.0",
+    "@octopy/react-charts": "1.0.0",
+    "@octopy/react-copyright": "1.0.0",
+    "@octopy/react-form": "1.0.0",
+    "@octopy/react-loader": "1.0.0",
+    "@octopy/react-modal": "1.0.0",
+    "@octopy/react-table": "1.0.0",
+    "@syncfusion/ej2-react-schedule": "^19.4.43",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "11.1.0",
+    "@testing-library/user-event": "12.1.10",
+    "axios": "^0.24.0",
+    "date-fns": "^2.28.0",
+    "firebase": "^9.1.2",
+    "formik": "2.2.6",
+    "lodash": "4.17.21",
+    "moment": "^2.29.1",
+    "node-sass": "5.0.0",
+    "prop-types": "15.7.2",
+    "react": "17.0.1",
+    "react-big-calendar": "^0.38.5",
+    "react-code-blocks": "0.0.8",
+    "react-datepicker": "^4.6.0",
+    "react-dom": "17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "5.13.2",
+    "react-lottie-player": "^1.4.1",
+    "react-material-ui-calendar": "^0.2.3",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.3",
+    "react-spring": "8.0.27",
+    "web-vitals": "1.0.1",
+    "yup": "0.32.9"
+  },
+  "scripts": {
+    "analyze": "node scripts/analyze.js",
+    "build": "react-scripts build",
+    "compress": "gzipper compress ./build ./gzip_build --output-file-format [filename].[ext] --verbose",
+    "eject": "react-scripts eject",
+    "extract-intl": "formatjs extract 'src/**/*.{js,jsx}' --out-file src/translations/es-mx.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format simple",
+    "extract-intl-all": "yarn extract-intl && node ../../intl/extract-intl-all.js app=react-spa-hemofilia language=es-mx",
+    "lint": "eslint ./src/**/*.{js,jsx}",
+    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
+    "postbuild": "yarn run compress",
+    "prebuild": "yarn run lint && rm -rf ./build",
+    "prettify": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "start": "react-scripts start",
+    "start:assets": "serve ./public -l 5000 --cors",
+    "start:mocks": "json-server ./mocks/index.js",
+    "start:prod": "yarn build && serve ./build -l 8000",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@formatjs/cli": "3.1.6",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "gzipper": "4.4.0",
+    "prettier": "2.2.1",
+    "progress-bar-webpack-plugin": "2.1.0",
+    "serve": "11.3.2",
+    "webpack-bundle-analyzer": "4.4.0"
+  }
+}
